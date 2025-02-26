@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="lr.css   " />
+  </head>
+  <body>
+    <div class="auth-container">
+      <h2>Login</h2>
+      <form onsubmit="onSubmitHandler(event)" class="auth-form">
+        <label>Username</label>
+        <input
+          type="text"
+          id="username"
+          class="auth-input"
+          placeholder="Username or Email"
+          required
+        />
+        <label>Password</label>
+        <input
+          type="password"
+          id="password"
+          class="auth-input"
+          placeholder="Password"
+          required
+        />
+
+        <button type="submit" id="password" class="auth-button">login</button>
+
+        <!-- <button type="submit" id="password" class="auth-button">
+          <a href="Home.html">Login</a>
+        </button> -->
+      </form>
+      <p class="auth-text">
+        Don't have an account?
+        <a class="auth-link" href="register.html">Register here</a>.
+      </p>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -6,108 +6,234 @@
     <title>PlanMyTrip</title>
     <link rel="stylesheet" href="home.css" />
   </head>
-  <body> 
+
+  <body onload="onHomePageLoad()">
     <nav class="navbar">
       <div>
-        <a href="#home">Home</a>
-        <a href="#plan">Plan</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact us</a>
+        <a  href="#home">Home</a>
+        <a style="display: none;" id="planLink" href="#plan">Plan</a>
+        <a style="display: none;" id="aboutLink" href="#about">About</a>
         <a href="#register">Register</a>
         <a href="#login">Login</a>
       </div>
     </nav>
+    <video autoplay loop muted class="bgvideo">
+      <source src="bg.mp4" type="video/mp4" />
+    </video>
+    <div class="main-body">
+      <section id="home" class="section">
+        <div class="home">
+          <h1>PlanMyTrip</h1>
+          <h3>"Ready for a new adventure? Lets plan it together"</h3>
+          <!-- <button><a href="#plan">Plan</a></button> -->
+        </div>
+      </section>
 
-<section id="home">
-<div>dfnnf</div>
+      <section id="main" class="section">
+        <div class="plan">
+          <div class="container">
+            <header>
+              <h1>Plan Your Journey</h1>
+              <p>Fill in the details below to start planning your trip</p>
+            </header>
 
-</section>
+            <main class="travel-form">
+              <form>
+                <div class="form-group">
+                  <label for="current-location">Current Location</label>
+                  <input
+                    type="text"
+                    id="current-location"
+                    name="current-location"
+                    placeholder="Enter your current location"
+                    required
+                  />
+                </div>
 
-    <section id="plan">
-      <div class="plan">
-    <div class="container">
-        
-      <header>
-        <h1>Plan Your Journey</h1>
-        <p>Fill in the details below to start planning your trip</p>
-      </header>
+                <div class="form-group">
+                  <label for="destination">Destination</label>
+                  <input
+                    type="text"
+                    id="destination"
+                    name="destination"
+                    placeholder="Enter your destination"
+                    required
+                  />
+                </div>
 
-      <main class="travel-form">
-        <form>
-          <div class="form-group">
-            <label for="current-location">Current Location</label>
-            <input
-              type="text"
-              id="current-location"
-              name="current-location"
-              placeholder="Enter your current location"
-              required
-            />
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="departure-date">Departure Date</label>
+                    <input
+                      type="date"
+                      id="departure-date"
+                      name="departure-date"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="return-date">Return Date</label>
+                    <input
+                      type="date"
+                      id="return-date"
+                      name="return-date"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="travelers">Number of Travelers</label>
+                  <input
+                    type="number"
+                    id="travelers"
+                    name="travelers"
+                    min="1"
+                    value="1"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="travel-mode">Mode of Transport</label>
+                  <select id="travel-mode" name="travel-mode" required>
+                    <option value="">Select mode of transport</option>
+                    <option value="flight">Flight</option>
+                    <option value="train">Train</option>
+                    <option value="bus">Bus</option>
+                    <option value="car">Car</option>
+                  </select>
+                </div>
+                <button type="submit" class="submit-btn">
+                  <a href="page2.html" target="_blank">Plan My Trip</a>
+                </button>
+              </form>
+            </main>
           </div>
-
-          <div class="form-group">
-            <label for="destination">Destination</label>
-            <input
-              type="text"
-              id="destination"
-              name="destination"
-              placeholder="Enter your destination"
-              required
-            />
+        </div>
+      </section>
+      <section id="about" class="section">
+        <div class="about">
+          <div class="about_box">
+            <h1>About Us</h1>
+            <p>
+              Welcome to PlanMyTrip, your ultimate companion for crafting
+              seamless and personalized travel experiences! We understand that
+              planning a trip can be overwhelming, which is why we’ve created an
+              intuitive platform that simplifies the process. Whether you’re
+              dreaming of a relaxing beach getaway, an adventurous trek through
+              the mountains, or a cultural city tour, our smart travel planner
+              generator helps you design the perfect itinerary in just a few
+              clicks. With customizable options, real-time suggestions, and
+              expert tips, we’re here to turn your travel dreams into reality.
+              Let us take the stress out of planning so you can focus on making
+              unforgettable memories. Start your journey with us today!
+            </p>
           </div>
+          <div class="about_box">
+            <img src="nature.png" alt="about image" class="aboutimg" />
+          </div>
+        </div>
+      </section>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="departure-date">Departure Date</label>
-              <input
-                type="date"
-                id="departure-date"
-                name="departure-date"
-                required
-              />
+      <section id="packages" class="section">
+        <div class="package">
+          <h1>Popular Packages</h1>
+          <div class="places">
+            <div class="packages">
+              <h1><img src="london.jpeg" /> London</h1>
             </div>
 
-            <div class="form-group">
-              <label for="return-date">Return Date</label>
-              <input type="date" id="return-date" name="return-date" required />
+            <div class="packages">
+              <h1><img src="dubai.jpeg" />Dubai</h1>
+            </div>
+            <div class="packages">
+              <h1><img src="japan.jpg" />Japan</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="faq">
+          <div class="container">
+            <h1>FAQ</h1>
+            <details>
+              <summary>
+                Does the generator support international destinations?
+              </summary>
+              <p>
+                Yes, the Travel Itinerary Generator supports thousands of
+                destinations worldwide. Whether you're planning a trip to Paris,
+                Tokyo, or a remote village, the tool can create a tailored
+                itinerary for you.
+              </p>
+            </details>
+
+            <details>
+              <summary>How accurate are the recommendations?</summary>
+              <p>
+                The recommendations are based on up-to-date data, user reviews,
+                and popular trends. However, we recommend double-checking
+                opening hours, availability, and local guidelines before
+                finalizing your plans.
+              </p>
+            </details>
+
+            <details>
+              <summary>Can I save and share my itinerary?</summary>
+              <p>
+                Yes, you can save your itinerary to your account and access it
+                anytime. You can also share it with friends, family, or travel
+                companions via email or a shareable link.
+              </p>
+            </details>
+
+            <details>
+              <summary>Are there pre-made itineraries available?</summary>
+              <p>
+                Yes, the Travel Itinerary Generator offers pre-made itineraries
+                for popular destinations. These can be customized to suit your
+                preferences.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="footer" class="section">
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-section">
+              <h3>About Us</h3>
+              <p>
+                PlanMyTrip is your ultimate travel companion, helping you create
+                personalized itineraries for your dream vacations.
+              </p>
+            </div>
+
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>Follow Us</h3>
+              <div class="social-icons"></div>
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="travelers">Number of Travelers</label>
-            <input
-              type="number"
-              id="travelers"
-              name="travelers"
-              min="1"
-              value="1"
-              required
-            />
+          <div class="footer-bottom">
+            <p>&copy; 2025 PlanMyTrip. All rights reserved.</p>
           </div>
-
-          <div class="form-group">
-            <label for="travel-mode">Mode of Transport</label>
-            <select id="travel-mode" name="travel-mode" required>
-              <option value="">Select mode of transport</option>
-              <option value="flight">Flight</option>
-              <option value="train">Train</option>
-              <option value="bus">Bus</option>
-              <option value="car">Car</option>
-            </select>
-          </div>
-
-          <button type="submit" class="submit-btn">Plan My Trip</button>
-        </form>
-      </main>
+        </footer>
+      </section>
     </div>
-  </div>
-</section>
-<section id="about">
-    <div class="about">
-        <h1>About Us</h1>
-        <p>Welcome to PlanMyTrip, your ultimate companion for crafting seamless and personalized travel experiences! We understand that planning a trip can be overwhelming, which is why we’ve created an intuitive platform that simplifies the process. Whether you’re dreaming of a relaxing beach getaway, an adventurous trek through the mountains, or a cultural city tour, our smart travel planner generator helps you design the perfect itinerary in just a few clicks. With customizable options, real-time suggestions, and expert tips, we’re here to turn your travel dreams into reality. Let us take the stress out of planning so you can focus on making unforgettable memories. Start your journey with us today!</p>
-    </div>
-</section>
-   
   </body>
+  <script src="home.js"></script>
 </html>
