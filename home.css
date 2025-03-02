@@ -16,7 +16,9 @@
   overflow: hidden;
   width: 100%;
   top: 0;
+  z-index: 1;
 }
+
 .navbar div {
   display: flex;
   gap: 20px;
@@ -27,11 +29,10 @@ body {
 .navbar a {
   color: rgb(231, 231, 231);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
   padding: 8px 12px;
   border-radius: 5px;
-  
 }
 
 .navbar a:hover {
@@ -216,22 +217,67 @@ header p {
   flex-direction: column;
   text-align: center;
   flex: 1 0 40%;
-  
+ opacity: 0;
+ transition: all 1s;
 }
-.about_box h1,
-p {
-  animation-name: popUpleft;
-  animation-duration: 3s;
+
+
+
+.about_box{
   opacity: 0;
+ transition: all 1s;
+ filter: blur(5px);
+ transform: translateY(100%);
+}
+
+.plan{
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+ transform: translateY(100%);
+}
+
+.package{
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+ transform: translateY(100%);
+}
+
+.faq{
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+ transform: translateY(100%);
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+
+.about_box h1 {
+  
+  animation-name: popUpleft; 
+  animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
  
- 
+
 }
 
 
-@keyframes popUpleft {
+.about_box p {
+  animation-name: popUpleft;
+  animation-duration: 3s;
   
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes popUpleft {  
   0% {
     scale: 0;
   }
@@ -244,17 +290,18 @@ p {
     transform: translateX(3rem);
   }
 }
+
 .about_box img {
+  
   animation-name: popUpright;
   animation-duration: 3s;
   opacity: 0;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  
+  z-index: -1;
 }
 
 @keyframes popUpright {
- 
   0% {
     scale: 0;
   }

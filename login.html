@@ -7,36 +7,34 @@
     <link rel="stylesheet" href="lr.css   " />
   </head>
   <body>
-    <div class="auth-container">
-      <h2>Login</h2>
+    <div class="auth-container" >
+      <span class="borderLine"></span>
       <form onsubmit="onSubmitHandler(event)" class="auth-form">
-        <label>Username</label>
-        <input
-          type="text"
-          id="username"
-          class="auth-input"
-          placeholder="Username or Email"
-          required
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          id="password"
-          class="auth-input"
-          placeholder="Password"
-          required
-        />
+        <h2>Login</h2>
+        <div class="inputbox">
+          <input 
+            type="text"
+            type="email"
+            id="username"
+            placeholder="Username or Email"
+            required
+          />
+        </div>
+        <div class="inputbox">
+          <input 
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
 
         <button type="submit" id="password" class="auth-button">login</button>
-
-        <!-- <button type="submit" id="password" class="auth-button">
-          <a href="Home.html">Login</a>
-        </button> -->
+        <p class="auth-text">
+          Don't have an account?
+          <a class="auth-link" href="register.html">Register here</a>.
+        </p>
       </form>
-      <p class="auth-text">
-        Don't have an account?
-        <a class="auth-link" href="register.html">Register here</a>.
-      </p>
     </div>
     <script src="main.js"></script>
   </body>

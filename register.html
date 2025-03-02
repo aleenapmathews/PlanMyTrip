@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link rel="stylesheet" href="lr.css">
-</head>
-<body>
-    <div class="auth-container">
+    <link rel="stylesheet" href="lr.css" />
+  </head>
+  <body>
+    <div class="regauth-container" style="width: 600px; height: 800px">
+      <span class="regborderLine"></span>
+
+      <form onsubmit="onSubmitHandlerReg(event)" class="auth-form">
         <h2>Register</h2>
-        <form method="post" class="auth-form">
-            <input type="text" class="auth-input" placeholder="Username" required>
-            <input type="email" class="auth-input" placeholder="Email" required>
-            <input type="password" class="auth-input" placeholder="Password" required>
-            <input type="password" class="auth-input" placeholder="Confirm Password" required>
-            <button class="auth-button" type="submit"><a href="login.html">Register</a></button>
-        </form>
+        <div class="inputbox">
+          <input type="text" id="username" placeholder="Username" required />
+        </div>
+        <div class="inputbox">
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+        <div class="inputbox">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div class="inputbox">
+          <input
+            type="password"
+            id="confirmpassword"
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+        <button class="regauth-button" type="submit">Register</button>
+
         <p class="auth-text">
-            Already have an account?
-            <a class="auth-link" href="login.html">Login here</a>.
+          Already have an account?
+          <a class="regauth-link" href="login.html">Login here</a>.
         </p>
+      </form>
     </div>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
