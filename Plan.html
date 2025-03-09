@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan
+    </title>
+    <link rel="stylesheet" href="plan.css" />
+  </head>
+  <body>
+    <div>
+      <nav class="navbar">
+        <div>
+          <a id="logoutLink" href="logout.html">Logout </a>
+        </div>
+      </nav>
+    </div>
+    <div class="plan">
+      <div class="container">
+        <header>
+          <h1>Plan Your Journey</h1>
+          <p>Fill in the details below to start planning your trip</p>
+        </header>
+
+        <main class="travel-form">
+          <form>
+            <div class="form-group">
+              <label for="current-location">Current Location</label>
+              <input
+                type="text"
+                id="current-location"
+                name="current-location"
+                placeholder="Enter your current location"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="destination">Destination</label>
+              <input
+                type="text"
+                id="destination"
+                name="destination"
+                placeholder="Enter your destination"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="departure-date">Departure Date</label>
+                <input
+                  type="date"
+                  id="departure-date"
+                  name="departure-date"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="return-date">Return Date</label>
+                <input
+                  type="date"
+                  id="return-date"
+                  name="return-date"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="travelers">Number of Travelers</label>
+              <input
+                type="number"
+                id="travelers"
+                name="travelers"
+                min="1"
+                value="1"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="travel-mode">Mode of Transport</label>
+              <select id="travel-mode" name="travel-mode" required>
+                <option value="">Select mode of transport</option>
+                <option value="flight">Flight</option>
+                <option value="train">Train</option>
+                <option value="bus">Bus</option>
+                <option value="car">Car</option>
+              </select>
+            </div>
+            <a href="generator.html" target="_blank" class="generator_btn"
+              >Plan My Trip</a
+            >
+          </form>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

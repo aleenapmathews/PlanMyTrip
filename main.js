@@ -8,7 +8,7 @@ function onSubmitHandler(event) {
   localStorage.setItem("username", username);
   localStorage.setItem("password", password);
 
-  window.location.href = "Home.html";
+  window.location.href = "Plan.html";
 }
 
 function onSubmitHandlerReg(event) {

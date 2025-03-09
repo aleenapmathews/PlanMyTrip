@@ -196,6 +196,27 @@ header p {
 .submit-btn a {
   text-decoration: none;
 }
+.generator_btn {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 100%;
+  background-image: linear-gradient(red, orange);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generator_btn:hover {
+  background-image: linear-gradient(orange, red);
+}
+.generator_btn a {
+  text-decoration: none;
+}
 
 /*about us*/
 
@@ -217,67 +238,60 @@ header p {
   flex-direction: column;
   text-align: center;
   flex: 1 0 40%;
- opacity: 0;
- transition: all 1s;
-}
-
-
-
-.about_box{
   opacity: 0;
- transition: all 1s;
- filter: blur(5px);
- transform: translateY(100%);
+  transition: all 1s;
 }
 
-.plan{
+.about_box {
   opacity: 0;
   transition: all 1s;
   filter: blur(5px);
- transform: translateY(100%);
+  transform: translateY(100%);
 }
 
-.package{
+.plan {
+  opacity: 0; 
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translateY(100%);
+}
+
+.package {
   opacity: 0;
   transition: all 1s;
   filter: blur(5px);
- transform: translateY(100%);
+  transform: translateY(100%);
 }
 
-.faq{
+.faq {
   opacity: 0;
   transition: all 1s;
   filter: blur(5px);
- transform: translateY(100%);
+  transform: translateY(100%);
 }
 
-.show{
+.show {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
 }
 
-
 .about_box h1 {
-  
-  animation-name: popUpleft; 
+  animation-name: popUpleft;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
- 
-
 }
-
 
 .about_box p {
   animation-name: popUpleft;
   animation-duration: 3s;
-  
+
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
 
-@keyframes popUpleft {  
+@keyframes popUpleft {
   0% {
     scale: 0;
   }
@@ -292,7 +306,6 @@ header p {
 }
 
 .about_box img {
-  
   animation-name: popUpright;
   animation-duration: 3s;
   opacity: 0;

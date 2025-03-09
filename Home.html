@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PlanMyTrip</title>
     <link rel="stylesheet" href="home.css" />
+    
   </head>
 
   <body onload="onHomePageLoad()">
     <nav class="navbar">
       <div>
         <a href="#home">Home</a>
-        <a id="planLink" href="#plan">Plan</a>
         <a href="#about">About</a>
         <a id="register" href="register.html">Register</a>
         <a id="login" href="login.html">Login</a>
-        <a id="logoutLink" href="logout.html">Logout </a>
       </div>
     </nav>
     <video autoplay loop muted class="bgvideo">
@@ -30,90 +29,7 @@
         </div>
       </section>
 
-      <section id="plan" class="section">
-        <div class="plan">
-          <div class="container">
-            <header>
-              <h1>Plan Your Journey</h1>
-              <p>Fill in the details below to start planning your trip</p>
-            </header>
-
-            <main class="travel-form">
-              <form>
-                <div class="form-group">
-                  <label for="current-location">Current Location</label>
-                  <input
-                    type="text"
-                    id="current-location"
-                    name="current-location"
-                    placeholder="Enter your current location"
-                    required
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="destination">Destination</label>
-                  <input
-                    type="text"
-                    id="destination"
-                    name="destination"
-                    placeholder="Enter your destination"
-                    required
-                  />
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="departure-date">Departure Date</label>
-                    <input
-                      type="date"
-                      id="departure-date"
-                      name="departure-date"
-                      required
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <label for="return-date">Return Date</label>
-                    <input
-                      type="date"
-                      id="return-date"
-                      name="return-date"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="travelers">Number of Travelers</label>
-                  <input
-                    type="number"
-                    id="travelers"
-                    name="travelers"
-                    min="1"
-                    value="1"
-                    required
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="travel-mode">Mode of Transport</label>
-                  <select id="travel-mode" name="travel-mode" required>
-                    <option value="">Select mode of transport</option>
-                    <option value="flight">Flight</option>
-                    <option value="train">Train</option>
-                    <option value="bus">Bus</option>
-                    <option value="car">Car</option>
-                  </select>
-                </div>
-                <button type="submit" class="submit-btn">
-                  <a href="page2.html" target="_blank">Plan My Trip</a>
-                </button>
-              </form>
-            </main>
-          </div>
-        </div>
-      </section>
+      
       <section id="about" class="section">
         <div class="about">
           <div class="about_box">

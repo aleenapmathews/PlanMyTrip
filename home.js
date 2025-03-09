@@ -1,25 +1,9 @@
 function onHomePageLoad() {
   const username = localStorage.getItem("username");
   const password = localStorage.getItem("password");
-  console.log(username, password);
-
-  //   let isLoggedIn = false;
-  //   if (username != null && password != null) {
-  //     isLoggedIn = true;
-  //   }
-  //   if (isLoggedIn == false) {
-  //     // window.location.href = "login.html";
-  //   }
-  //   else{
-  //       document.getElementById("planLink").style.display="block";
-  //       document.getElementById("aboutLink").style.display="block";
-  //       document.getElementById("logoutLink").style.display="block";
-
-  //   }
-  // }
 
   let isLoggedIn = username !== null && password !== null;
-
+  
   if (isLoggedIn) {
     document.getElementById("planLink").style.display = "block";
     document.getElementById("logoutLink").style.display = "block";
@@ -33,26 +17,28 @@ function onHomePageLoad() {
   }
 }
 
-// Logout Function
-document.getElementById("logoutLink").addEventListener("click", function () {
-  localStorage.removeItem("username");
-  localStorage.removeItem("password");
-  onHomePageLoad(); // Update UI after logout
-});
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show");
-    }
+// Ensure logout functionality only runs if logoutLink exists
+let logoutLink = document.getElementById("logoutLink");
+if (logoutLink) {
+  logoutLink.addEventListener("click", function () {
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+    onHomePageLoad(); // Update UI after logout
   });
+}
+
+// Fix for Intersection Observer to ensure sections are displayed
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".about_box, .plan, .package, .faq");
+  hiddenElements.forEach((el) => observer.observe(el));
 });
-
-const hiddenElements = document.querySelectorAll(".about_box, .plan, .package, .faq");
-hiddenElements.forEach((el) => observer.observe(el));
-
-
-
