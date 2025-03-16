@@ -1,10 +1,14 @@
-/*navbar*/
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
+
+
 
 .navbar {
   display: flex;
@@ -79,19 +83,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-/* .home button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10rem;
-  height: 3rem;
-  background-color: #b0b0b0;
-  border-color: transparent;
-}
-.home a{
-  font-size:2rem ;
-} */
 
 /*plan*/
 
@@ -250,7 +241,7 @@ header p {
 }
 
 .plan {
-  opacity: 0; 
+  opacity: 0;
   transition: all 1s;
   filter: blur(5px);
   transform: translateY(100%);
@@ -347,46 +338,9 @@ header p {
   margin-left: 5rem;
 }
 
-/*mobile*/
-@media (min-width: 1024px) {
-}
-
-/*tablet*/
-@media (max-width: 768px) {
-  .form-row {
-    flex-direction: column;
-  }
-
-  .container {
-    margin: 20px;
-    padding: 15px;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-}
-
-/*phone view*/
-@media (max-width: 480px) {
-  .form-group input,
-  .form-group select {
-    font-size: 0.9rem;
-  }
-
-  .submit-btn {
-    font-size: 1rem;
-  }
-  .navbar {
-    display: inline-block;
-  }
-}
-
 /*packages*/
+
+
 .package h1 {
   display: flex;
   flex-direction: column;
@@ -407,7 +361,8 @@ header p {
 
 .places {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .package h1 {
@@ -417,8 +372,15 @@ header p {
 .package img {
   width: 20rem;
   height: 27rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 
+.packages img:hover{
+  transform: scale(1.02);
+  }
 /*footer*/
 
 /* General Footer Styles */
@@ -486,16 +448,18 @@ header p {
 /* Social Icons */
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 30px;
+  justify-content: start;
 }
 
-.social-icons a {
+.social-icons svg {
   color: #ecf0f1;
   font-size: 1.2rem;
   transition: color 0.3s ease;
+  margin-bottom: 50px;
 }
 
-.social-icons a:hover {
+.social-icons svg:hover {
   color: #f39c12;
 }
 
@@ -550,7 +514,14 @@ header p {
 
 .faq h1 {
   color: #131111;
+  font-weight: bold;
 }
+
+
+.social-icons{
+
+}
+
 
 details {
   background-color: #f5f5f5;
@@ -590,4 +561,157 @@ details[open] summary::after {
   color: #555;
   background-color: #fff;
   border-top: 1px solid #ddd;
+}
+
+
+
+/* Responsive Design */
+
+/* small lap View */
+@media (max-width: 1024px) {
+  .home h1 {
+    font-size: 5rem;
+  }
+  
+
+  .home h3 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+  
+  .places {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px; /* Adjusts spacing between grid items */
+    justify-content: center;
+    
+  }
+  
+  .packages {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    /* width: 100%; */
+    
+  }
+  
+  
+  .packages h1 {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  .packages img {
+    width: 200px;
+    max-width: 2300px; /* Adjust max-width as needed */
+    height: 300px;
+    border-radius: 10px;
+    
+  }
+
+}
+
+/* tab View */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h3 {
+    font-size: 0.5rem;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home h1 {
+    font-size: 4rem;
+  }
+
+  .home h3 {
+    font-size: 1.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .about {
+    padding: 20px;
+  }
+
+  .package img {
+    max-width: 200px;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}
+
+/* Phone View */
+@media (max-width: 480px) {
+  .form-group input,
+  .form-group select {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+  }
+  .navbar {
+    display: inline-block;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .navbar a {
+    font-size: 1.5rem;
+  }
+
+  .home h1 {
+    font-size: 3rem;
+  }
+
+  .home h3 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .package img {
+    max-width: 150px;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
 }

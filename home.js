@@ -3,7 +3,7 @@ function onHomePageLoad() {
   const password = localStorage.getItem("password");
 
   let isLoggedIn = username !== null && password !== null;
-  
+
   if (isLoggedIn) {
     document.getElementById("planLink").style.display = "block";
     document.getElementById("logoutLink").style.display = "block";
@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const hiddenElements = document.querySelectorAll(".about_box, .plan, .package, .faq");
+  const hiddenElements = document.querySelectorAll(
+    ".about_box, .plan, .package, .faq"
+  );
   hiddenElements.forEach((el) => observer.observe(el));
 });

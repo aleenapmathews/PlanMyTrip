@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personalized Itinerary</title>
-  <link rel="stylesheet" href="generator.css">
-</head>
-<body>
-  <div class="container">
-    <h2 class="title">Your Personalized Itinerary</h2>
-    <p class="subtitle">Explore your planned trip with day-wise details</p>
-
-    <div class="card trip-details">
-      <div class="card-header">Trip Details</div>
-      <div class="card-body">
-        <ul>
-          <li><strong>Destination:</strong> [Destination]</li>
-          <li><strong>From:</strong> [Current Location]</li>
-          <li><strong>Travel Dates:</strong> [Start Date] to [End Date]</li>
-          <li><strong>Travelers:</strong> [Number of Travelers]</li>
-          <li><strong>Transport Mode:</strong> [Transport Mode]</li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personalized Itinerary</title>
+    <link rel="stylesheet" href="generator.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h2 class="title">Your Personalized Itinerary</h2>
+        <h3 class="subtitle">
+          Explore your planned trip with day-wise details
+        </h3>
       </div>
-    </div>
-
-    <div class="itinerary">
-      <div class="card day-card">
-        <div class="card-header">Day [Day Number]</div>
-        <div class="card-body">
-          <ul>
-            <li><strong>[Time]</strong> - [Activity Description]</li>
-            <li><strong>[Time]</strong> - [Activity Description]</li>
-          </ul>
+      <div class="maindiv">
+        <div class="card" style="max-height: fit-content">
+          <div class="card-header">Trip Details</div>
+          <div class="card-body">
+            <ul>
+              <li><strong>Destination:</strong> [Destination]</li>
+              <li><strong>From:</strong> [Current Location]</li>
+              <li><strong>Travel Dates:</strong> [Start Date] to [End Date]</li>
+              <li><strong>Travelers:</strong> [Number of Travelers]</li>
+              <li><strong>Transport Mode:</strong> [Transport Mode]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sub-div">
+          <div class="itinerary">
+            <div class="card">
+              <div class="card-header">Day [Day Number]</div>
+              <div class="card-body">
+                <ul>
+                  <li><strong>[Time]</strong> - [Activity Description]</li>
+                  <li><strong>[Time]</strong> - [Activity Description]</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="no-itinerary">
-      <p class="warning"> No itinerary available. Please try again.</p>
-    </div>
+      <!-- <div class="no-itinerary">
+        <p class="warning">No itinerary available. Please try again.</p>
+      </div>
 
-    <div class="buttons">
-      <a href="#" class="btn download">Download Itinerary</a>
+      <div class="buttons">
+        <a href="#" class="btn download">Download Itinerary</a>
+      </div> -->
     </div>
-  </div>
-</body>
+  </body>
+</html>
