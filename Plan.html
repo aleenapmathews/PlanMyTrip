@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plan
-    </title>
+    <title>Plan</title>
     <link rel="stylesheet" href="plan.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +12,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body >
     <div>
       <nav class="navbar">
         <div>
@@ -21,8 +20,7 @@
         </div>
       </nav>
     </div>
-    <div class="plan"> 
-     
+    <div class="plan">
       <div class="container">
         <header>
           <h1>Plan Your Journey</h1>
@@ -50,6 +48,7 @@
                 name="destination"
                 placeholder="Enter your destination"
                 required
+                onchange="ondestinationChange(event)"
               />
             </div>
 
@@ -105,4 +104,5 @@
       </div>
     </div>
   </body>
+  <script src="plan.js"></script>
 </html>

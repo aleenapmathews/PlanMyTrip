@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onload="onDestinationLoad()">
     <div class="container">
       <div class="heading">
         <h2 class="title">Your Personalized Itinerary</h2>
@@ -48,6 +48,11 @@
         </div>
       </div>
 
+
+      <div >
+        <img id="image" class="dest_img">
+      </div>
+
       <!-- <div class="no-itinerary">
         <p class="warning">No itinerary available. Please try again.</p>
       </div>
@@ -57,4 +62,5 @@
       </div> -->
     </div>
   </body>
+  <script src="plan.js"></script>
 </html>
