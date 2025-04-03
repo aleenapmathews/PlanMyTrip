@@ -22,7 +22,7 @@ body {
   border-radius: 8px;
   color: #fff;
   overflow: hidden;
-}
+} 
 
 .auth-container::before {
   content: "";
@@ -30,7 +30,7 @@ body {
   top: -50%;
   left: -50%;
 
-  background: linear-gradient(0deg, rgba(79, 179, 186, 2), #00eeff);
+  background: linear-gradient(0deg, rgb(185, 37, 37), red)!important;
   z-index: 1;
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -42,7 +42,7 @@ body {
   top: -50%;
   left: -50%;
 
-  background: linear-gradient(0deg, rgba(79, 179, 186, 2), #00eeff);
+  background: linear-gradient(0deg, rgba(238, 74, 3, 0), red)!important;
   z-index: 1;
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -70,7 +70,7 @@ body {
   top: -50%;
   left: -50%;
 
-  background: linear-gradient(0deg, rgba(79, 179, 186, 2), #00eeff);
+  background: linear-gradient(0deg, rgb(255, 0, 0), red)!important;
   z-index: 1;
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -82,7 +82,7 @@ body {
   top: -50%;
   left: -50%;
 
-  background: linear-gradient(0deg, rgba(79, 179, 186, 2), #00eeff);
+  background: linear-gradient(0deg, rgb(243, 81, 32), red)!important;
   z-index: 1;
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -113,7 +113,7 @@ body {
   top: -50%;
   left: -50%;
 
-  background: linear-gradient(0deg, rgba(200, 91, 144, 2), #03116e);
+  background: linear-gradient(0deg, rgba(200, 91, 144, 2), orange)!important;
   z-index: 1;
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -126,7 +126,7 @@ body {
   top: -50%;
   left: -50%;
 
-  background: linear-gradient(0deg, rgba(200, 91, 144, 2), #03116e);
+  background: linear-gradient(0deg, rgba(200, 91, 144, 2), orange)!important;
   z-index: 1;
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -150,7 +150,7 @@ body {
   top: -50%;
   left: -50%;
 
-  background: linear-gradient(0deg, rgba(200, 91, 144, 2), #03116e);
+  background: linear-gradient(0deg, rgba(200, 91, 144, 2), orange)!important;
   z-index: 1;
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -163,7 +163,7 @@ body {
   top: -50%;
   left: -50%;
 
-  background: linear-gradient(0deg, rgba(200, 91, 144, 2), #03116e);
+  background: linear-gradient(0deg, rgba(200, 91, 144, 2), orange)!important;
   z-index: 1;
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -230,15 +230,15 @@ button {
   margin-bottom: 40px;
   font-size: 1.6rem;
   border: none;
-  background: linear-gradient(90deg, #2193b0, #6dd5ed);
+  background-image: linear-gradient(orange, red)!important;
   color: #0a0a0a;
 }
 
 button:hover {
-  background: linear-gradient(90deg, #2193b0, #6dd5ed);
+  background-image: linear-gradient(orange, red)!important;
 
   transform: scale(1);
-  box-shadow: 0px 10px 20px rgba(100, 211, 244, 0.5);
+  box-shadow: 0px 10px 20px rgba(252, 159, 11, 0.5);
   z-index: 10;
 }
 
@@ -270,10 +270,10 @@ p {
 }
 
 .regauth-button:hover {
-  background: linear-gradient(90deg, #2193b0, #6dd5ed);
+  background-image: linear-gradient(orange, red)!important;
 
   transform: scale(1);
-  box-shadow: 0px 10px 20px rgba(100, 211, 244, 0.5);
+  box-shadow: 0px 10px 20px rgba(252, 159, 11, 0.5);
   z-index: 10;
 }
 
